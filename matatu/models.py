@@ -1,5 +1,6 @@
 import datetime
 from django.db import models
+from django.utils import timezone
 
 
 # Create your models here.
@@ -11,7 +12,7 @@ class Role(models.Model):
         ('Conductor', 'Conductor'),
     )
     role = models.CharField(max_length=200, null=True, choices=CATEGORY)
-    date_created = models.DateTimeField(auto_now_add=True, default=datetime.datetime.now())
+    date_created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.role
@@ -44,7 +45,7 @@ class Route(models.Model):
     route_name = models.CharField(max_length=1000, null=True)
     distance_in_km = models.FloatField(max_length=15)
     price = models.FloatField(max_length=15)
-    date_created = models.DateTimeField(auto_now_add=True, default=datetime.datetime.now())
+    date_created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.route_name
@@ -63,26 +64,42 @@ class Vehicle(models.Model):
     model = models.CharField(max_length=30)
     sacco = models.CharField(max_length=30, null=True)
     seat_capacity = models.CharField(max_length=30, choices=CAPACITY)
-    date_created = models.DateTimeField(auto_now_add=True, default=datetime.datetime.now())
+    date_created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.reg_no
+        return f"{self.reg_no} ({self.person.Role_ID})"
 
 
-class Activity(models.Model):
+class Town(models.Model):
+    name = models.CharField(max_length=200, null=True)
+    gps_x = models.FloatField(max_length=15)
+    gps_y = models.FloatField(max_length=15)
+
+    def __str__(self):
+        return self.name
+
+
+class DailyActivity(models.Model):
     STATUS = (
         ('Full', 'Full'),
         ('Chance', 'Chance'),
     )
 
     vehicle = models.ForeignKey(Vehicle, null=True, on_delete=models.SET_NULL)
-    date_created = models.DateTimeField(auto_now_add=True, null=True)
-
-    direction = models.CharField(max_length=1000, null=True)
-
-    price = models.models.FloatField(max_length=15)
+    direction_to = models.ForeignKey(Town, null=True, on_delete=models.SET_NULL)
+    date_created = models.DateTimeField(auto_now_add=True)
+    price = models.FloatField(max_length=15)
+    status = models.CharField(max_length=30)
     status = models.CharField(max_length=30, choices=STATUS)
 
     def __str__(self):
-        return self.name
+        return f"{self.direction_to} ({self.price})"
 
+
+class Cordinates_activity(models.Model):
+    gps_x = models.FloatField(max_length=15)
+    gps_y = models.FloatField(max_length=15)
+    activity = models.ForeignKey(DailyActivity, null=True, on_delete=models.SET_NULL)
+
+    def __str__(self):
+        return self.activity.vehicle.reg_no
