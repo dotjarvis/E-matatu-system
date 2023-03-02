@@ -13,31 +13,37 @@ body {
 }
 
 .header {
-  background-color: #f8f8f9;
+  background-color: #e6e6e6;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: rgba(148, 71, 71, 0.211);
+  justify-content: space-between;
+  padding: 0 4.8rem;
 }
 
-.nav-list {
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-nav-list {
   list-style-type: none;
   display: flex;
   align-items: center;
-  /* justify-content: space-around; */
-  gap: 4rem;
+  justify-content: space-between;
+  gap: 4.8rem;
 }
 
 .nav-detail {
   display: inline-block;
   padding: 1.8rem;
   text-decoration: none;
-  color: #000;
-  font-size: 2.2rem;
+  color: #333;
+  font-size: 1.8rem;
 }
 
 .search-input {
-  padding: 1.4rem;
+  padding: 1rem;
   width: 40rem;
   font-size: 1.8rem;
   border: none;
@@ -55,7 +61,6 @@ body {
 }
 
 .map {
-  /* background-color: blue; */
   height: 50rem;
   display: flex;
   align-items: center;
