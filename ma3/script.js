@@ -190,7 +190,7 @@ function success(position) {
   const coords = new google.maps.LatLng(myLat, myLong);
 
   const mapOptions = {
-    zoom: 18,
+    zoom: 10,
     center: coords,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
   };

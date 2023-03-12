@@ -7,7 +7,7 @@
     <title>e-Ma3</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/style.css" />
     <script type="module" src="./script.js"></script>
   </head>
   <body>
@@ -36,9 +36,164 @@
           </div>
         </div>
       </section>
-    </main>
 
-    <footer class="footer"></footer>
+      <section class="section-search-results">
+        <div class="container">
+          <p class="search-results">Your search results</p>
+          <div class="result-table">
+            <table class="search-results-table">
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>No. plate</th>
+                  <th>Sacco</th>
+                  <th>Driver</th>
+                  <th>Route</th>
+                  <th>Price (Ksh.)</th>
+                  <th>Location</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <td>KBA 380W</td>
+                  <td>Kisymo Sacco</td>
+                  <td>Kamane</td>
+                  <td>Kakamega-vihiga-kisumu-sondu-nyakach-homabay</td>
+                  <td>750</td>
+                  <td><a href="#">find</a></td>
+                </tr>
+
+                <tr>
+                  <th>2</th>
+                  <td>KDA 450P</td>
+                  <td>Bacayo Sacco</td>
+                  <td>Benjamin</td>
+                  <td>Kakamega-vihiga-kisumu-sondu-oyugis-homabay</td>
+                  <td>800</td>
+                  <td><a href="#">find</a></td>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <td>KCD 990M</td>
+                  <td>Mapambano Sacco</td>
+                  <td>Chris</td>
+                  <td>Kakamega-vihiga-kisumu-oyugis-Kisii</td>
+                  <td>850</td>
+                  <td><a href="#">find</a></td>
+                </tr>
+                <tr>
+                  <th>4</th>
+                  <td>KCA 009E</td>
+                  <td>Sabuu Sacco</td>
+                  <td>Franco</td>
+                  <td>Kisumu-sondu-nyakach-homabay</td>
+                  <td>550</td>
+                  <td><a href="#">find</a></td>
+                </tr>
+                <tr>
+                  <th>5</th>
+                  <td>KCC 786Y</td>
+                  <td>-</td>
+                  <td>Sharon</td>
+                  <td>Homabay-Oyugis-Kisii</td>
+                  <td>650</td>
+                  <td><a href="#">find</a></td>
+                </tr>
+                <tr>
+                  <th>6</th>
+                  <td>KDD 810V</td>
+                  <td>Sinco Sacco</td>
+                  <td>Jack</td>
+                  <td>Kakamega-Kisumu-Kericho-Nakuru</td>
+                  <td>1000</td>
+                  <td><a href="#">find</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <hr class="hr" />
+    <footer class="footer">
+      <div class="footer-3-cols">
+        <div class="get-app-links">
+          <h1 class="uber-eats-footer-logo">
+            <div class="logo">
+              <span class="light-bold">E</span>
+              <span class="bold">Mat</span>
+            </div>
+          </h1>
+          <div class="download-app-links">
+            <a href="#"
+              ><img
+                src="imgs/applestore.svg"
+                alt="Download on the App Store"
+            /></a>
+            <a href="#"
+              ><img
+                src="imgs/playstore-logo.png"
+                alt="Get it on Google Play"
+            /></a>
+          </div>
+        </div>
+
+        <div class="gethelp-and-sign-up">
+          <ul>
+            <li><a href="#"> Get Help</a></li>
+            <li><a href="#"> Add your mat</a></li>
+            <li><a href="#"> Create a business account</a></li>
+          </ul>
+        </div>
+
+        <div class="location-and-about-uber-eats">
+          <ul>
+            <li><a href="#"> Mats near me</a></li>
+            <li><a href="#"> About E~mat</a></li>
+            <li><a href="#"> English</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="hr hr--light" />
+      <section class="lower_details">
+        <div class="follow-us-terms-privacy">
+          <div class="social-media-handles">
+            <a href="#" class="social-icon"
+              ><img src="imgs/facebook.svg" alt="Facebook logo"
+            /></a>
+            <a href="#" class="social-icon"
+              ><img src="imgs/twitter.svg" alt="Facebook logo"
+            /></a>
+            <a href="#" class="social-icon"
+              ><img src="imgs/instagram.svg" alt="Facebook logo"
+            /></a>
+          </div>
+          <div class="privacy-policy-terms-and-pricing">
+            <ul class="privacy-list">
+              <li><a class="privacy-detail" href="#">Privacy Policy</a></li>
+              <li><a class="privacy-detail" href="#">Terms</a></li>
+              <li><a class="privacy-detail" href="#">Pricing</a></li>
+              <li>
+                <a class="privacy-detail" href="#"
+                  >Do not sell or share my peronal information</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="protection">
+          <p>
+            This site is protected by reCAPTCHA and Google
+            <a href="#"> Privacy Policy</a> and
+            <a href="#"> Terms of Service</a> apply.
+          </p>
+          <p>&copy; 2023 E~Mat Technologies Inc.</p>
+        </div>
+      </section>
+    </footer>
     <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjMm0P2e-wnMltd1ws967XrjYP0hukzOw&callback=initMap&v=weekly"
     defer

@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Bungee&family=Outfit&family=Poppins:wght@300;400;500;600;700&family=Ramabhadra&family=Roboto&family=Roboto+Condensed:wght@300&family=Sacramento&family=Secular+One&family=Staatliches&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+}
+
+/* GENERAL */
+.hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid rgba(204, 204, 204, 0.5);
+  margin: 1em 0;
+  padding: 0;
+}
+
+.hr--light {
+  border-top: 1px solid rgba(204, 204, 204, 0.2);
+}
